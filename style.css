@@ -1,0 +1,183 @@
+body {
+  background-color: #111;
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #ff0000;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subhead {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.box {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ff0000;
+}
+
+.box h2 {
+  color: #ffcc00;
+}
+
+ul {
+  text-align: left;
+  margin-top: 15px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.urgency {
+  color: #ff4500;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 15px 25px;
+  background-color: #ff0000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #cc0000;
+}
+
+.warning {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #ff5555;
+}
+
+/* Notícias container */
+.news-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 25px 0 40px 0;
+  align-items: stretch;
+  flex-wrap: nowrap; /* manter 1 linha no desktop */
+}
+
+/* Notícias imagens */
+.news-img {
+  flex: 1 1 0;
+  border: 5px solid #ff0000;
+  border-radius: 10px;
+  box-shadow: 0 0 25px #ff0000;
+  object-fit: contain;
+  background-color: #111;
+  width: auto;
+  height: 300px;
+  max-width: 100%;
+}
+
+/* RESPONSIVO para celular */
+@media (max-width: 700px) {
+  .news-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .news-img {
+    height: auto;       /* deixa a altura automática */
+    width: 90vw;        /* ocupa quase toda a largura da tela */
+    max-width: 400px;   /* limita o tamanho no celular */
+  }
+}
+
+
+#countdown-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #b30000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 9999;
+  box-shadow: 0 0 15px #ff0000;
+}
+
+body {
+  padding-top: 50px; /* Para o conteúdo não ficar escondido atrás da barra */
+}
+
+.price-box {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: fit-content;
+  font-family: 'Arial Black', Arial, sans-serif;
+  text-align: center;
+  box-shadow: 0 0 15px #ff0000;
+  margin: 20px auto;
+}
+
+.original-price {
+  font-size: 18px;
+  color: #bbb;
+  text-decoration: line-through;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.discount-label {
+  color: #ff3333;
+  font-weight: 900;
+  font-size: 16px;
+  margin-bottom: 12px;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid #ff3333;
+  border-radius: 5px;
+  animation: pulse 1.5s infinite;
+}
+
+.final-price {
+  font-size: 36px;
+  color: #2edb0b;
+  margin: 0 0 10px 0;
+  letter-spacing: 2px;
+}
+
+.urgency-text {
+  font-size: 14px;
+  color: #1dd30c;
+  font-style: italic;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0%, 100% {opacity: 1;}
+  50% {opacity: 0.6;}
+}
